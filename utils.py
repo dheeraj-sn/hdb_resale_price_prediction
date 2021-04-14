@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import csv
+from sklearn.metrics import mean_squared_error
 
 def reduce_memory_usage(dataframe):
     start_mem_usg = dataframe.memory_usage().sum() / 1024**2 
@@ -68,9 +69,14 @@ def reduce_memory_usage(dataframe):
     print("This is ",100*mem_usg/start_mem_usg,"% of the initial size")
     return dataframe, NAlist
 
+## We have defined this customer scorer function to find the root mean square error when using cross_val_score
+def custom_kfold_scorer(model,X,y):
+    return mean_squared_error(y, model.predict(X), squared=False)
+
 def save_to_csv(data, path):
     with open(path, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['Id','Predicted'])
         for i in range(len(data)):
             writer.writerow([i,float(data[i])])
+            
