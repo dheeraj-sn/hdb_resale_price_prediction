@@ -11,9 +11,9 @@ def reduce_memory_usage(dataframe):
         if dataframe[col].dtype != object:  # Exclude strings
             
             # Print current column type
-            print("**********")
-            print("Column: ",col)
-            print("dtype before: ",dataframe[col].dtype)
+            #print("**********")
+            #print("Column: ",col)
+            #print("dtype before: ",dataframe[col].dtype)
             
             # make variables for Int, max and min
             IsInt = False
@@ -59,8 +59,8 @@ def reduce_memory_usage(dataframe):
                 dataframe[col] = dataframe[col].astype(np.float32)
             
             # Print new column type
-            print("dtype after: ",dataframe[col].dtype)
-            print("**********")
+            #print("dtype after: ",dataframe[col].dtype)
+            #print("**********")
     
     # Print final result
     print("__MEMORY USAGE AFTER COMPLETION:__")
