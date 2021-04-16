@@ -1,4 +1,4 @@
-# hdb_resale_price
+# Singapore HDB flat resale price prediction
 
 ## Data files
 - train.csv -> Provided training dataset
