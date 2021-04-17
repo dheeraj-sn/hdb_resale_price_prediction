@@ -5,7 +5,7 @@
 - test.csv        : Provided test dataset
 - train_2.csv     : Transformed train.csv file after data cleaning and pre-processing 
 - test_2.csv      : Transformed test.csv file after pre-processing
-- auxiliary-data  : Folder containg auxiliary data and map files use for plotting
+- auxiliary-data  : Folder containg auxiliary data and map files used for plotting
 
 ## Jupyter notebooks
 Jupyter notebooks - PLEASE OPEN AND NAVIGATE THEM IN THIS ORDER.
